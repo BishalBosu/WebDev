@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <title>Get a Call</title>
+
+    <Style>
+        form{
+            margin: auto;
+            padding: 50px;
+            width: 70%;
+            background-color: orange;
+            text-align: center;
+        }
+        body{
+            background-color:  rgba(0, 0, 0, 0.534);
+        }
+
+    </Style>
+    
+</head>
+<body>
+    <div class="parent">
+    <h1>Book a call slor and our representatiove will call you within 1hr of selected time.</h1>
+    <div id="form">
+   <div class="container">
+        <form novalidate> 
+            <div class="form-floating">                
+                <input type="text" required id="name" class="form-control" placeholder="type name here...">
+                <label for="name">Name</label>
+            </div>
+            <br>
+            <div class="form-floating">                
+                <input type="email" required id="email" class="form-control" placeholder="type email here...">
+                <label for="email">Email</label>
+            </div>
+            <br>
+
+            <div class="form-floating">                
+                <input type="text" required id="phone" class="form-control" placeholder="type email here...">
+                <label for="phone">Phone</label>
+            </div>
+            <br>
+            
+
+            <div class="row">
+                <div class="form-floating col-6">                
+                    <input type="date" id="date" value="2023-02-11" class="form-control" placeholder="type email here...">
+                    <label for="date">Date</label>
+                </div>
+
+                <div class="form-floating col-6">                
+                    <input type="time" id="time" value="11:00" class="form-control" placeholder="type email here...">
+                    <label for="email">Time</label>
+                </div>
+                
+            </div>
+            <br>
+
+
+            <button type="submit" class="btn btn-dark">Get a Call</button>
+        </form>
+   </div>
+</div>
+   <script>
+        const form = document.querySelector('form')
+
+        form.addEventListener('submit', e => {
+            if(!form.checkValidity()){
+                e.preventDefault()
+            }
+
+            form.classList.add('was-validated')
+
+            var name = document.getElementById("a1");
+  event.preventDefault();
+  var name = document.getElementById("name");
+  var e = document.getElementById("email");
+  
+  var ph = document.getElementById("phone");
+  
+  var da = document.getElementById("date");
+  
+  var ti = document.getElementById("time");
+  console.log("Name: " + name.value + " email: " + e.value + " Phone: " + ph.value + " date: " + da.value + " Time: " + ti.value);
+        })
+
+
+
+
+   </script>
+
+
+</body>
+</html>
